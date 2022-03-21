@@ -1,0 +1,50 @@
+{
+    "name": "livevasiliy/alfacash-test-case",
+    "description": "The test-case for company Alfacash.",
+    "keywords": ["framework", "laravel", "lumen"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vasiliy Pivovarov",
+            "email": "livevasily@yandex.ru"
+        }
+    ],
+    "type": "project",
+    "require": {
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.4",
+        "illuminate/redis": "^9.5",
+        "laravel/lumen-framework": "^9.0",
+        "thecodingmachine/safe": "^2.1",
+        "webmozart/assert": "^1.10"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.9.1",
+        "mockery/mockery": "^1.4.4",
+        "phpunit/phpunit": "^9.5.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
